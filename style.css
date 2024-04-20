@@ -8,15 +8,15 @@
 
 button {
   display:block;
-  height: 70px;
-  width: 70px;
+  height: calc(95vh/9);
+  width: calc(95vh/9);
   border-radius: 50%;
   border: 1px solid transparent;
 }
 
 #phone {
   height: 95vh;
-  width: 52vh;
+  width: 50vh;
   background-color: #fca305;
   position: absolute;
   top: 50%;
@@ -43,6 +43,7 @@ button {
   text-align: right;
   position: relative;
   pointer-events: none;
+  overflow: hidden;
 }
 
 #display > p {
@@ -84,6 +85,11 @@ button {
   color: black;
 }
 
+@keyframes btnsTopClick {
+  0% { background-color: #cacaca; }
+  100% { background-color: #a5a5a5;}
+}
+
 #numbers {
   height: 80%;
   display: flex;
@@ -98,11 +104,16 @@ button {
   background-color: #333333;
 }
 
+@keyframes numbersClick {
+  0% { background-color: #7c7c7c; }
+  100% { background-color: #333333;}
+}
+
 #btn0 {
   order: 2;
-  width: 150px;
+  width: calc(95vh/4.5);
   border-radius: 30%/50%;
-  padding-left: 30px;
+  padding-left: 12.5%;
   text-align: left;
 }
 
@@ -120,4 +131,19 @@ button {
 #btns-r > button {
   margin: 4px 0px;
   background-color: #fca305;
+}
+
+@keyframes btnsRClick {
+  0% { background-color: #ffbd80; }
+  100% { background-color: #ffe9c4; }
+}
+
+@keyframes btnsRClickOff {
+  0% { background-color: #ffe9c4; }
+  100% { background-color: #fca305; }
+}
+
+.active-btn-r {
+  background-color: #ffe9c4;
+  color: #fca305;
 }
